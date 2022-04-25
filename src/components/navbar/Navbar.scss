@@ -1,0 +1,29 @@
+.navbar-section{
+    width: 100vw;
+    height: 70px;
+    background: linear-gradient(147.82deg, #000000 19.31%, #0a0808 84.19%);
+    color: wheat;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    
+  
+    
+    .logo{
+        font-size: 30px;   
+        width: 30vw;
+        padding-top: 10px;
+        padding-left: 100px;
+     }
+   .list-items{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       list-style: none;
+       width: 40vw;
+       padding-left: 100px;
+      li{
+          padding: 5px 2px;
+      }
+   }
+}

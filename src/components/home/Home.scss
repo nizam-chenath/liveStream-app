@@ -1,0 +1,42 @@
+.home-section{
+    height: 90vh;
+    width: 100vw;
+    background: linear-gradient(147.82deg, #000000 19.31%, #230D0D 84.19%);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    .pictureSection{
+        margin-left: 150px;
+        margin-top: 25px;
+        img{
+            height: 550px;
+            width: 300px;
+        }
+    }
+    .buttonSection{
+        margin-top: 100px;
+        h2{
+            font-size: 70px;
+            background: linear-gradient(
+                to right, #ffffff, #7e7c7a,
+                 #3a3a3a, #202020);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        button{
+            padding: 10px 30px;
+            color: rgb(255, 255, 255);
+            background: linear-gradient(274.75deg, #FF0000 -9.06%, #000000 146.69%);
+            box-shadow: 8px -12px 19px -78px rgba(201, 201, 201, 0.69);
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+            margin: -15px 200px;
+            img{
+                height: 25px;
+                width: 25px;
+                margin-bottom: -5px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
