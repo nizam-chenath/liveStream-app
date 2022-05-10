@@ -1,16 +1,33 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 import cr7 from "../../images/cr7.png";
 import youtube from "../../images/youtube.png"
+import gsap from 'gsap';
+import { useRef, useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Home = () => {
+  let imgRef = useRef(null);
+  let headingRef = useRef(null);
+
+  useEffect(()=>{
+      
+         gsap.fromTo(imgRef, {opacity: 0}, {opacity: 1, duration: 5, scrollTrigger:{
+           trigger: imgRef
+         }})
+         gsap.fromTo(headingRef,{opacity: 0 },{opacity: 1, duration: 4, ScrollTrigger:{
+            trigger: headingRef
+         }})
+  },[])
   return (
-    <div className="home-section">
+    <div className="home-section" >
        <div className="pictureSection">
-           <img src={cr7} alt="" />
+           <img src={cr7} alt="" ref={el => {imgRef = el}}/>
        </div>
        <div className="buttonSection">
-            <h2>LIVE STREAMING</h2>
+            <h2 ref={el =>{headingRef =el}}>LIVE STREAMING</h2>
             <button> <img src={youtube} alt="" />  PLAY</button>
        </div>
     </div>

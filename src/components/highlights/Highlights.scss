@@ -1,0 +1,35 @@
+.highlight-section{
+       margin-top: -20px;
+       height: auto;
+       width: 100vw;
+       background: linear-gradient(147.82deg, #000000 19.31%, #110808 84.19%);
+      h2{
+        padding: 100px 0px 30px 150px;
+        
+        font-family: 'bruno-ace-sc-regular', sans-serif;
+      
+        background: linear-gradient(180deg, #FFFFFF 0%, #444040 92.98%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+       
+        
+      }
+}
+.video-section{
+  overflow: hidden;
+  padding-bottom: 57%;
+  position: relative;
+  height: 0;
+ 
+  iframe{
+    top: 0;
+    height: 70%;
+    width: 80vw;
+    position: absolute;
+    padding: 0 10vw;
+    
+    // border: 3px solid white;
+    // border-radius: 13px;
+  }
+}

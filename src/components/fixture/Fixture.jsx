@@ -1,66 +1,50 @@
 import React from 'react'
-import "./Fixture.css"
-import bg2 from "../../images/bg2.jpg"
+import "./Fixture.scss"
+import Card from './Card'
+import data from "../../data/data.json"
+import gsap from 'gsap';
+import { useRef, useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Fixture = () => {
+ let headingRef = useRef(null);
+ let cardRef = useRef(null);
+
+  useEffect(()=>{
+    gsap.fromTo(headingRef, {opacity: 0, x: -20}, {opacity: 1, x: 0, scrollTrigger:{
+      trigger: headingRef,
+      start: "-50%",
+      end: "50%",
+      scrub: true,
+    }})
+    gsap.fromTo(cardRef, {opacity: 0}, {opacity: 1, scrollTrigger:{
+      trigger: ".fixture-section",
+      start: "-10%",
+      end: "50%",
+      scrub: true,
+    }})
+  },[])
+
   return (
-    <div className="fixture-section">
+    <div >
+
+    <div className="fixture-section" >
       
-       <h3>Todays Fixture</h3>
+       <h3 ref={el => {headingRef = el}}>Todays Fixture</h3>
        
-       <div className="card-section">
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
-            <div className="cards">
-                <img src={bg2} alt="" />
-                <div className="text-block">
-                    <p>Portugal vs India</p>
-                </div>
-            </div>
+       <div className="card-section" ref={el => {cardRef = el}}>
+           {
+               data.map((items) =>(
+                   <Card image={items.img} match={items.match} />
+               ))
+           }
        
             
            
        </div>
+    </div>
     </div>
   )
 }

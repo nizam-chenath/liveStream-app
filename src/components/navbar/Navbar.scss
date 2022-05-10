@@ -5,10 +5,6 @@
     color: wheat;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
-    
-  
-    
     .logo{
         font-size: 30px;   
         width: 30vw;
@@ -16,12 +12,13 @@
         padding-left: 100px;
      }
    .list-items{
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
        list-style: none;
-       width: 40vw;
-       padding-left: 100px;
+       padding-right: 100px;
+       place-content: center;
+       justify-items: end;
+       align-items: end;
       li{
           padding: 5px 2px;
       }
