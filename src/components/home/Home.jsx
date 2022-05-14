@@ -14,9 +14,21 @@ const Home = () => {
 
   useEffect(()=>{
       
-         gsap.fromTo(imgRef, {opacity: 0}, {opacity: 1, duration: 5, scrollTrigger:{
-           trigger: imgRef
-         }})
+        //  gsap.fromTo(imgRef, {opacity: 0}, {opacity: 1, duration: 5, scrollTrigger:{
+        //    trigger: imgRef
+        //  }})
+         gsap.fromTo(imgRef, {opacity: 1}, {opacity: 0,  scrollTrigger:{
+          trigger: ".home-section",
+          start: "0%",
+          end: "60%",
+          scrub: true,
+        }}) 
+        gsap.fromTo(headingRef, {opacity: 1}, {opacity: 0,  scrollTrigger:{
+          trigger: ".home-section",
+          start: "0%",
+          end: "30%",
+          scrub: true,
+        }})
          gsap.fromTo(headingRef,{opacity: 0 },{opacity: 1, duration: 4, ScrollTrigger:{
             trigger: headingRef
          }})
