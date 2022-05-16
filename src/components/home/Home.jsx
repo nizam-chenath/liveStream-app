@@ -11,13 +11,20 @@ gsap.registerPlugin(ScrollTrigger)
 const Home = () => {
   let imgRef = useRef(null);
   let headingRef = useRef(null);
+  let btnRef = useRef(null);
 
   useEffect(()=>{
       
-        //  gsap.fromTo(imgRef, {opacity: 0}, {opacity: 1, duration: 5, scrollTrigger:{
-        //    trigger: imgRef
-        //  }})
+         gsap.fromTo(imgRef, {opacity: 0}, {opacity: 1, duration: 5, scrollTrigger:{
+           trigger: imgRef
+         }})
          gsap.fromTo(imgRef, {opacity: 1}, {opacity: 0,  scrollTrigger:{
+          trigger: ".home-section",
+          start: "0%",
+          end: "60%",
+          scrub: true,
+        }}) 
+        gsap.fromTo(btnRef, {opacity: 1}, {opacity: 0,  scrollTrigger:{
           trigger: ".home-section",
           start: "0%",
           end: "60%",
@@ -29,7 +36,7 @@ const Home = () => {
           end: "30%",
           scrub: true,
         }})
-         gsap.fromTo(headingRef,{opacity: 0 },{opacity: 1, duration: 4, ScrollTrigger:{
+         gsap.fromTo(headingRef,{opacity: 0 },{opacity: 1, duration: 7, ScrollTrigger:{
             trigger: headingRef
          }})
   },[])
@@ -39,8 +46,8 @@ const Home = () => {
            <img src={cr7} alt="" ref={el => {imgRef = el}}/>
        </div>
        <div className="buttonSection">
-            <h2 ref={el =>{headingRef =el}}>LIVE STREAMING</h2>
-            <button> <img src={youtube} alt="" />  PLAY</button>
+            <h2 ref={el =>{headingRef = el}}>LIVE STREAMING</h2>
+            <button ref={el=>{btnRef = el}}> <img src={youtube} alt="" />  PLAY</button>
        </div>
     </div>
   )

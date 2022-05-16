@@ -1,16 +1,30 @@
 import React from 'react'
 import "./Fixture.scss"
 import Card from './Card'
-import data from "../../data/data.json"
+// import data from "../../data/data.json"
 import gsap from 'gsap';
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import axios from 'axios'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Fixture = () => {
+
+  const [datas, setDatas] = useState([]);
+
  let headingRef = useRef(null);
  let cardRef = useRef(null);
+
+   useEffect(()=>{
+     axios({
+       method: "GET",
+       url: `https://www.scorebat.com/video-api/v3/feed/?token=MTk0ODRfMTY1MjYwMDkzMl8wYjM5ZDJhZTkwMzY2MjY1MzQ0Yzc2NGIzYWFlYjQ5MTc3ZTQyYjBk`,
+     }).then(res => {
+       console.log(res.data);
+       setDatas(res.data.response)
+     }).catch(err=> console.log(err))
+   },[]);
 
   useEffect(()=>{
     gsap.fromTo(headingRef, {opacity: 0, x: -20}, {opacity: 1, x: 0, scrollTrigger:{
@@ -36,8 +50,8 @@ const Fixture = () => {
        
        <div className="card-section" ref={el => {cardRef = el}}>
            {
-               data.map((items) =>(
-                   <Card image={items.img} match={items.match} />
+               datas.map((items) =>(
+                   <Card image={items.thumbnail} match={items.title} url={items.matchviewUrl}/>
                ))
            }
        
