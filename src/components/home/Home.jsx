@@ -1,10 +1,11 @@
 import React from 'react';
 import './Home.scss';
-import cr7 from "../../images/cr7.png";
+import cr7 from "../../images/homeimg.gif";
 import youtube from "../../images/youtube.png"
 import gsap from 'gsap';
 import { useRef, useEffect } from 'react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {Link} from 'react-router-dom'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,13 +42,18 @@ const Home = () => {
          }})
   },[])
   return (
+   
+
     <div className="home-section" >
+      
        <div className="pictureSection">
            <img src={cr7} alt="" ref={el => {imgRef = el}}/>
        </div>
        <div className="buttonSection">
             <h2 ref={el =>{headingRef = el}}>LIVE STREAMING</h2>
-            <button ref={el=>{btnRef = el}}> <img src={youtube} alt="" />  PLAY</button>
+            
+            <button onClick={()=> window.open("https://www.hotstar.com/in/sports/football")}  ref={el=>{btnRef = el}}> <img src={youtube} alt="" />  PLAY</button>
+            
        </div>
     </div>
   )

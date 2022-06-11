@@ -1,7 +1,7 @@
 .fixture-section{
     width: 100vw;
     height: auto;
-    background: linear-gradient(147.82deg, #000000 19.31%, #230D0D 84.19%);
+    background-color: #6369D1;
     margin-top: -37px;
     
     h3{
@@ -10,7 +10,7 @@
         padding: 100px 0px;
         background: linear-gradient(
                 to right, #ffffff, #eee9e5,
-                 #3a3a3a, #202020);
+                 #969696, #c0c0c0);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
     }
@@ -35,7 +35,7 @@
         .text-block{
             position: absolute;
             bottom: 20px;
-            background-color: black;
+            background-color: #34435E;
            
             width: 100%;
             border: none;
@@ -49,5 +49,19 @@
         }
         
     }
+    }
+}
+@media(max-width:900px){
+    .fixture-section{
+        .card-section{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media(max-width:600px){
+    .fixture-section{
+        .card-section{
+            grid-template-columns: 1fr;
+        }
     }
 }

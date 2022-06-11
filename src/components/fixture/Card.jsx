@@ -1,5 +1,5 @@
 import React from 'react';
-import cr7 from "../../images/cr7.png"
+
 
 const Card = ({ image, match, url}) => {
   return (

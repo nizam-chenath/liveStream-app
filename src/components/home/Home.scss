@@ -1,7 +1,7 @@
 .home-section{
     height: 90vh;
     width: 100vw;
-    background: linear-gradient(147.82deg, #000000 19.31%, #000000 84.19%);
+    background-color: #6369D1;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     .pictureSection{
@@ -17,15 +17,15 @@
         h2{
             font-size: 70px;
             background: linear-gradient(
-                to right, #ffffff, #7e7c7a,
-                 #3a3a3a, #202020);
+                to right, #ffffff, #D8D2E1,
+                 #D8D2E1, #202020);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
         }
         button{
             padding: 10px 30px;
-            color: rgb(255, 255, 255);
-            background: linear-gradient(274.75deg, #FF0000 -9.06%, #000000 146.69%);
+            color: #D8D2E1;
+            background: #B88E8D;
             box-shadow: 8px -12px 19px -78px rgba(201, 201, 201, 0.69);
             border-radius: 10px;
             border: none;
@@ -39,4 +39,29 @@
             }
         }
     }
+}
+@media(max-width: 900px){
+    .home-section{
+        grid-template-columns: 1fr;
+        .pictureSection{
+            display: grid;
+            place-items: center;
+            margin-left: 0;
+           img{
+               width: 230px;
+               height: 420px;
+           }
+        }
+        .buttonSection{
+            display: grid;
+            place-items: center;
+            h2{
+                font-size: 35px;
+            }
+            button{
+                margin: 0;
+            }
+        }
+    }
+    
 }

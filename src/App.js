@@ -1,17 +1,15 @@
 
 import './App.css';
-import Fixture from './components/fixture/Fixture';
-import Highlights from './components/highlights/Highlights';
-import Home from './components/home/Home';
-import Navbar from './components/navbar/Navbar';
+import {Route, Routes} from 'react-router-dom'
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-       <Home/>
-       <Fixture/>
-       <Highlights/>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+     
+      </Routes>
     </div>
   );
 }
