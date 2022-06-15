@@ -6,12 +6,16 @@ import gsap from 'gsap';
 import { useState, useRef, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import axios from 'axios'
+import Pagination from './Pagination';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Fixture = () => {
 
   const [datas, setDatas] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [nomberItems] = useState(12);
 
  let headingRef = useRef(null);
  let cardRef = useRef(null);
@@ -41,6 +45,14 @@ const Fixture = () => {
     }})
   },[])
 
+    const indexofLastPost = currentPage * nomberItems;
+    const indexofFirstPost = indexofLastPost - nomberItems;
+    const currentItems = datas.slice(indexofFirstPost, indexofLastPost)
+     
+    //function that call when pagination nomber clicked
+    // const gotopage = num => setCurrentPage(num)
+  const gotopage = number =>  setCurrentPage(number);
+    
   return (
     <div >
 
@@ -50,14 +62,12 @@ const Fixture = () => {
        
        <div className="card-section" ref={el => {cardRef = el}}>
            {
-               datas.map((items) =>(
+               currentItems.map((items) =>(
                    <Card image={items.thumbnail} match={items.title} url={items.matchviewUrl}/>
                ))
            }
-       
-            
-           
        </div>
+       <Pagination nomberofitems={nomberItems} totalitems={datas.length} gotopage={gotopage} />
     </div>
     </div>
   )

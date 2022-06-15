@@ -50,6 +50,36 @@
         
     }
     }
+    .pagination{
+        width: auto;
+        height: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 50px 10%;
+        justify-items: center;
+        .ul{
+            list-style: none;
+            display: flex;
+            // justify-content: center;
+            // align-items: center;
+            li{
+               width: 50px;
+               height: 50px;
+               background-color: #B88E8D;
+               cursor: pointer;
+               border-radius: 50%;
+               margin: 0 5px;
+               text-align: center;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               .a{
+                   text-decoration: none;
+                   color: white
+               }
+            }
+        }
+    }
 }
 @media(max-width:900px){
     .fixture-section{
@@ -62,6 +92,14 @@
     .fixture-section{
         .card-section{
             grid-template-columns: 1fr;
+        }
+        .pagination{
+            .ul{
+                li{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
     }
 }
