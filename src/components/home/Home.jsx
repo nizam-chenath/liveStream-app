@@ -4,7 +4,6 @@ import cr7 from "../../images/homeimg.gif";
 import youtube from "../../images/youtube.png"
 import gsap from 'gsap';
 import { useRef, useEffect } from 'react';
-import {Link} from 'react-router-dom'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -44,7 +43,7 @@ const Home = () => {
   return (
    
 
-    <div className="home-section" >
+    <div className="home-section" id="home">
       
        <div className="pictureSection">
            <img src={cr7} alt="" ref={el => {imgRef = el}}/>

@@ -54,7 +54,7 @@ const Fixture = () => {
   const gotopage = number =>  setCurrentPage(number);
     
   return (
-    <div >
+    <div id="highlights">
 
     <div className="fixture-section" >
       
@@ -67,7 +67,7 @@ const Fixture = () => {
                ))
            }
        </div>
-       <Pagination nomberofitems={nomberItems} totalitems={datas.length} gotopage={gotopage} />
+       <Pagination nomberofitems={nomberItems} totalitems={datas.length} gotopage={gotopage} currentPage={currentPage}/>
     </div>
     </div>
   )

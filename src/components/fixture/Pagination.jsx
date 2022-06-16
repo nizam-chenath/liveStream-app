@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const Pagination = ({nomberofitems, totalitems, gotopage }) => {
+const Pagination = ({nomberofitems, totalitems, gotopage, currentPage }) => {
     const pageNumbers = [];
 
     for( let i=1; i<= Math.ceil(totalitems / nomberofitems); i++){
@@ -14,8 +14,8 @@ const Pagination = ({nomberofitems, totalitems, gotopage }) => {
        
             {pageNumbers.map((number)=>(
 
-            <li onClick={() => gotopage(number)} className="li" key={number}>
-                <Link className="a " to={"/"}>{number}</Link>
+            <li onClick={() => gotopage(number)} className={currentPage === number ? "active-li" : "li"} key={number}>
+                <Link className= "a" to={"/"}>{number}</Link>
             </li>
   ))}
      

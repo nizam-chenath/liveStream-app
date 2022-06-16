@@ -30,7 +30,7 @@ const Highlights = () => {
   },[])
 
   return (
-    <div className="highlight-section"  >
+    <div className="highlight-section" id="fixture" >
         <h2 ref={el => {headingRef = el}}>HIGHLIGHTS</h2>
         <div ref={el => {youRef=el}}>
 

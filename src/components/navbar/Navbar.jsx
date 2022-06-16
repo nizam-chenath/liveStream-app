@@ -1,9 +1,10 @@
 import React from 'react'
 import './Navbar.scss'
-import {Link} from 'react-router-dom'
+import {HashLink as Link} from 'react-router-hash-link'
 import { useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import {FaTimesCircle} from 'react-icons/fa'
+
 
 
 const Navbar = () => {
@@ -14,10 +15,10 @@ const Navbar = () => {
     <div className="navbar-section">
         <div className="logo">Logo</div>
         <ul className={mobile ? "mobile-list" : "list-items"}>
-              <Link to=""><li>Home</li></Link> 
-              <Link to=""><li>Live</li></Link> 
-              <Link to=""><li>Highlights</li></Link> 
-              <Link to=""><li>fixtures</li></Link> 
+              <Link to="#home" smooth><li>Home</li></Link> 
+              <Link to="#home" smooth><li>Live</li></Link> 
+              <Link to="#highlights" smooth><li>Highlights</li></Link> 
+              <Link to="#fixture"smooth><li>fixtures</li></Link> 
         </ul> 
 
         <button onClick={() => setMobile(!mobile)} className="menu-icon" >
