@@ -15,7 +15,7 @@ const Highlights = () => {
  var youRef = useRef(null);
  
   useEffect(()=>{
-      gsap.fromTo(headingRef,{ opacity: 0, marginLeft : "0px"}, {opacity : 1, marginLeft: "200px", scrollTrigger:{
+      gsap.fromTo(headingRef,{ opacity: 0, marginLeft : "0px"}, {opacity : 1, marginLeft: "20px", scrollTrigger:{
         trigger: ".highlight-section",
         start: "-50%",
         end: "10%",

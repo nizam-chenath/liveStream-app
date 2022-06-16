@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="logo">Logo</div>
         <ul className={mobile ? "mobile-list" : "list-items"}>
               <Link to="#home" smooth><li>Home</li></Link> 
-              <Link to="#home" smooth><li>Live</li></Link> 
+              
               <Link to="#highlights" smooth><li>Highlights</li></Link> 
               <Link to="#fixture"smooth><li>fixtures</li></Link> 
         </ul> 

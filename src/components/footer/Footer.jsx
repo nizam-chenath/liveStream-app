@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { HashLink as Link} from 'react-router-hash-link'
 import './Footer.scss'
 
 const Footer = () => {
@@ -21,9 +21,9 @@ const Footer = () => {
                     </div>
                     <div className="third">
                         <h3>Quick Links</h3>
-                        <Link className="link" to="#">Home</Link>
-                        <Link className="link" to="#">Highlights</Link>
-                        <Link className="link" to="#">Live</Link>
+                        <Link className="link" to="#home">Home</Link>
+                        <Link className="link" to="#highlights">Highlights</Link>
+                        <Link className="link" to="#fixture">Live</Link>
                     </div>
                 </div>
             </div>

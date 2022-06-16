@@ -13,12 +13,24 @@
             .first{
                 max-width: 45vw;
                 font-size: 12px;
+                h3{
+                    color: white;
+                }
+                
             }
             .second{
                 font-size: 12px;
+                h3{
+                    color: white;
+                }
+             
             }
             .third{
                 font-size: 12px;
+                h3{
+                    color: white;
+                }
+               
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;
                 .link{
@@ -31,6 +43,7 @@
      
         h4{
             font-size: 10px;
+            color: white;
         }
     }
 }
