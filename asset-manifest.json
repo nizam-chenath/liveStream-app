@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/liveStream-app/static/css/main.104c68a9.css",
-    "main.js": "/liveStream-app/static/js/main.72d452b6.js",
+    "main.js": "/liveStream-app/static/js/main.c6579c4f.js",
     "static/media/homeimg.gif": "/liveStream-app/static/media/homeimg.e77d7ab990e8684db434.gif",
     "index.html": "/liveStream-app/index.html",
     "main.104c68a9.css.map": "/liveStream-app/static/css/main.104c68a9.css.map",
-    "main.72d452b6.js.map": "/liveStream-app/static/js/main.72d452b6.js.map"
+    "main.c6579c4f.js.map": "/liveStream-app/static/js/main.c6579c4f.js.map"
   },
   "entrypoints": [
     "static/css/main.104c68a9.css",
-    "static/js/main.72d452b6.js"
+    "static/js/main.c6579c4f.js"
   ]
 }
