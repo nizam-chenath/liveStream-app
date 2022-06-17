@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Fixture = () => {
 
   const [datas, setDatas] = useState([]);
-  const [loading, setLoading] = useState(false);
+ 
   const [currentPage, setCurrentPage] = useState(1);
   const [nomberItems] = useState(12);
 

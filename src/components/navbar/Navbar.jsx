@@ -18,7 +18,7 @@ const Navbar = () => {
               <Link to="#home" smooth><li>Home</li></Link> 
               
               <Link to="#highlights" smooth><li>Highlights</li></Link> 
-              <Link to="#fixture"smooth><li>fixtures</li></Link> 
+              <Link to="#fixture" smooth><li>fixtures</li></Link> 
         </ul> 
 
         <button onClick={() => setMobile(!mobile)} className="menu-icon" >
