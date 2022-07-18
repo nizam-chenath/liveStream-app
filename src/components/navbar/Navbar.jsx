@@ -13,7 +13,7 @@ const Navbar = () => {
   <>
  
     <div className="navbar-section">
-        <div className="logo">Logo</div>
+        <div className="logo">live-stream</div>
         <ul className={mobile ? "mobile-list" : "list-items"}>
               <Link to="#home" smooth><li>Home</li></Link> 
               
